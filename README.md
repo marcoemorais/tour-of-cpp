@@ -1,5 +1,10 @@
 # tour-of-cpp
 
+Exercises and advice based on the book:
+```
+B. Stroustrup: A Tour of C++ (Second Edition). July 2018. Addison-Wesley. ISBN 978-0-13-499783-4. 240 pages. Softcover and electronic versions.
+```
+
 ## Table of Contents
 
 * [01-the-basics](#the-basics)
@@ -90,5 +95,44 @@
  [7] Use enumerations to represent sets of named constants; §2.5; [CG: Enum.2].
  [8] Prefer class enums over “plain” enums to minimize surprises; §2.5; [CG: Enum.3
  [9] Define operations on enumerations for safe and simple use; §2.5; [CG: Enum.4].
+```
+
+## 03-modularity
+
+### Code
+
+* [base.cc](./03-modularity/base.cc)
+* [binding.cc](./03-modularity/binding.cc)
+* [rangemap.cc](./03-modularity/rangemap.cc)
+* [throwcatch.cc](./03-modularity/throwcatch.cc)
+
+### Advice
+```
+ [1] Distinguish between declarations (used as interfaces) and definitions (used as implementations); §3.1.
+ [2] Use header files to represent interfaces and to emphasize logical structure; §3.2; [CG: SF.3].
+ [3] #include a header in the source file that implements its functions; §3.2; [CG: SF.5]
+ [4] Avoid non-inline function definitions in headers; §3.2; [CG: SF.2].
+ [5] Prefer modules over headers (where modules are supported); §3.3
+ [6] Use namespaces to express logical structure; §3.4; [CG: SF.20].
+ [7] Use using-directives for transition, for foundational libraries (such as std), or within a local scope; §3.4; [CG: SF.6] [CG: SF.7].
+ [8] Don't put a using-directive in a header file; §3.4; [CG: SF.7].
+ [9] Throw an exception to indicate that you cannot perform an assigned task; §3.5; [CG: E.2].
+[10] Use exceptions for error handling only; §3.5.3; [CG: E.3].
+[11] Use error codes when an immediate caller is expected to handle the error; §3.5.3
+[12] Throw an exception if the error is expected to percolate up through many function calls; §3.5.3.
+[13] If in doubt whether to use an exception or an error code, prefer exceptions; §3.5.3.
+[14] Develop an error-handling strategy early in a design; §3.5; [CG: E.12].
+[15] Use purpose-designed user-defined types as exceptions (not built-in types); §3.5.1
+[16] Don't try to catch every exception in every function; §3.5; [CG: E.7].
+[17] Prefer RAII to explicit try-blocks; §3.5.1, §3.5.2; [CG: E.6].
+[18] If your function may not throw, declare it noexcept; §3.5; [CG: E.12].
+[19] Let a constructor establish an invariant, and throw if it cannot; §3.5.2; [CG: E.5].
+[20] Design your error-handling strategy around invariants; §3.5.2; [CG: E.4].
+[21] What can be checked at compile time is usually best checked at compile time; §3.5.5 [CG: P.4] [CG: P.5].
+[22] Pass “small” values by value and “large“ values by references; §3.6.1;F.16].
+[23] Prefer pass-by-const-reference over plain pass-by-reference; §3.6.1; [CG: F.17].
+[24] Return values as function-return values (rather than by out-parameters); §3.6.2; [CG: F.20] [CG: F.21].
+[25] Don't overuse return-type deduction; §3.6.2.
+[26] Don't overuse structured binding; using a named return type is often clearer documentation; §3.6.3.
 ```
 

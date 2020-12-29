@@ -25,7 +25,7 @@ public:
         return elems[i];
     }
 
-    std::size_t size()
+    std::size_t size() const
     {
         return sz;
     }

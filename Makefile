@@ -6,7 +6,8 @@ ACTION?=test
 
 DIRS := \
     01-the-basics \
-    02-user-defined-types
+    02-user-defined-types \
+    03-modularity
 
 .PHONY: $(DIRS)
 
