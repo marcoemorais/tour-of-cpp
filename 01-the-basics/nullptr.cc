@@ -3,6 +3,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest/doctest.h"
 
+// count frequency of x in p.
 int count(const char *p, char x)
 {
     int count = 0;

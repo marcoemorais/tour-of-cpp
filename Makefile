@@ -8,7 +8,8 @@ DIRS := \
     01-the-basics \
     02-user-defined-types \
     03-modularity \
-    04-classes
+    04-classes \
+    05-essential-operations
 
 .PHONY: $(DIRS)
 

@@ -3,6 +3,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest/doctest.h"
 
+// square returns x^2 at runtime or compile-time.
 constexpr double square(double x)
 {
     return x*x;

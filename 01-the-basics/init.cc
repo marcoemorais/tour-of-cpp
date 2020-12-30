@@ -6,12 +6,15 @@
 
 TEST_CASE("[init]")
 {
+    // Copy initialization.
     double d1 = 2.3;
     REQUIRE(d1 == 2.3);
 
+    // Direct initialization using braced-init-list.
     double d2{2.3};
     REQUIRE(d2 == 2.3);
 
+    // Copy initialization from braced-init-list.
     double d3 = {2.3};
     REQUIRE(d3 == 2.3);
 
