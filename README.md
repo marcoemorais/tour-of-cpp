@@ -136,3 +136,38 @@ B. Stroustrup: A Tour of C++ (Second Edition). July 2018. Addison-Wesley. ISBN 9
 [26] Don't overuse structured binding; using a named return type is often clearer documentation; §3.6.3.
 ```
 
+## 04-classes
+
+### Code
+
+* [shapes.cc](./04-classes/shapes.cc)
+* [vector2.cc](./04-classes/vector2.cc)
+
+### Advice
+```
+ [1] Express ideas directly in code; §4.1; [CG: P.1].
+ [2] A concrete type is the simplest kind of class. Where applicable, prefer a concrete type over more complicated classes and over plain data structures; §4.2; [CG: C.10].
+ [3] Use concrete classes to represent simple concepts; §4.2.
+ [4] Prefer concrete classes over class hierarchies for performance-critical components; §4.2.
+ [5] Define constructors to handle initialization of objects; §4.2.1, §5.1.1; [CG: C.40] [CG: C.41].
+ [6] Make a function a member only if it needs direct access to the representation of a class; §4.2.1; [CG: C.4].
+ [7] Define operators primarily to mimic conventional usage; §4.2.1; [CG: C.160].
+ [8] Use nonmember functions for symmetric operators; §4.2.1; [CG: C.161].
+ [9] Declare a member function that does not modify the state of its object const; §4.2.1.
+[10] If a constructor acquires a resource, its class needs a destructor to release the resource; §4.2.2; [CG: C.20].
+[11] Avoid “naked” new and delete operations; §4.2.2; [CG: R.11].
+[12] Use resource handles and RAII to manage resources; §4.2.2; [CG: R.1].
+[13] If a class is a container, give it an initializer-list constructor; §4.2.3; [CG: C.103].
+[14] Use abstract classes as interfaces when complete separation of interface and implementation is needed; §4.3; [CG: C.122].
+[15] Access polymorphic objects through pointers and references; §4.3.
+[16] An abstract class typically doesn't need a constructor; §4.3; [CG: C.126].
+[17] Use class hierarchies to represent concepts with inherent hierarchical structure; §4.5.
+[18] A class with a virtual function should have a virtual destructor; §4.5; [CG: C.127].
+[19] Use override to make overriding explicit in large class hierarchies; §4.5.1; [CG: C.128].
+[20] When designing a class hierarchy, distinguish between implementation inheritance and interface inheritance; §4.5.1; [CG: C.129].
+[21] Use dynamic_cast where class hierarchy navigation is unavoidable; §4.5.2; [CG: C.146].
+[22] Use dynamic_cast to a reference type when failure to find the required class is considered a failure; §4.5.2; [CG: C.147].
+[23] Use dynamic_cast to a pointer type when failure to find the required class is considered a valid alternative; §4.5.2; [CG: C.148].
+[24] Use unique_ptr or shared_ptr to avoid forgetting to delete objects created using new; §4.5.3; [CG: C.149].
+```
+

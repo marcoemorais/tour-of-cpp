@@ -7,7 +7,8 @@ ACTION?=test
 DIRS := \
     01-the-basics \
     02-user-defined-types \
-    03-modularity
+    03-modularity \
+    04-classes
 
 .PHONY: $(DIRS)
 
