@@ -55,7 +55,7 @@ B. Stroustrup: A Tour of C++ (Second Edition). July 2018. Addison-Wesley. ISBN 9
 [13] Avoid complicated expressions; [CG: ES.40].
 [14] Avoid narrowing conversions; §1.4.2; [CG: ES.46].
 [15] Minimize the scope of a variable; §1.5.
-[16] Avoid “magic constants”; use symbolic constants; §1.6; [CG: ES.45].
+[16] Avoid magic constants; use symbolic constants; §1.6; [CG: ES.45].
 [17] Prefer immutable data; §1.6; [CG: P.10].
 [18] Declare one name (only) per declaration; [CG: ES.10].
 [19] Keep common and local names short, and keep uncommon and nonlocal names longer; [CG: ES.7].
@@ -91,10 +91,10 @@ B. Stroustrup: A Tour of C++ (Second Edition). July 2018. Addison-Wesley. ISBN 9
  [3] Represent the distinction between an interface and an implementation using a class; §2.3; [CG: C.3].
  [4] A struct is simply a class with its members public by default; §2.3.
  [5] Define constructors to guarantee and simplify initialization of classes; §2.3; [CG: C.2].
- [6] Avoid “naked” unions; wrap them in a class together with a type field; §2.[CG: C.181]
- [7] Use enumerations to represent sets of named constants; §2.5; [CG: Enum.2].
- [8] Prefer class enums over “plain” enums to minimize surprises; §2.5; [CG: Enum.3
- [9] Define operations on enumerations for safe and simple use; §2.5; [CG: Enum.4].
+ [6] Avoid naked unions; wrap them in a class together with a type field; §2.[CG: C.181]
+ [7] Use enumerations to represent sets of named constants; §.5; [CG: Enum.2].
+ [8] Prefer class enums over plain enums to minimize surprises; §2.5.
+ [9] Define operations on enumerations for safe and simple use; §2.5.
 ```
 
 ## 03-modularity
@@ -129,7 +129,7 @@ B. Stroustrup: A Tour of C++ (Second Edition). July 2018. Addison-Wesley. ISBN 9
 [19] Let a constructor establish an invariant, and throw if it cannot; §3.5.2; [CG: E.5].
 [20] Design your error-handling strategy around invariants; §3.5.2; [CG: E.4].
 [21] What can be checked at compile time is usually best checked at compile time; §3.5.5 [CG: P.4] [CG: P.5].
-[22] Pass “small” values by value and “large“ values by references; §3.6.1;F.16].
+[22] Pass small values by value and large values by references; §3.6.1;F.16].
 [23] Prefer pass-by-const-reference over plain pass-by-reference; §3.6.1; [CG: F.17].
 [24] Return values as function-return values (rather than by out-parameters); §3.6.2; [CG: F.20] [CG: F.21].
 [25] Don't overuse return-type deduction; §3.6.2.
@@ -155,7 +155,7 @@ B. Stroustrup: A Tour of C++ (Second Edition). July 2018. Addison-Wesley. ISBN 9
  [8] Use nonmember functions for symmetric operators; §4.2.1; [CG: C.161].
  [9] Declare a member function that does not modify the state of its object const; §4.2.1.
 [10] If a constructor acquires a resource, its class needs a destructor to release the resource; §4.2.2; [CG: C.20].
-[11] Avoid “naked” new and delete operations; §4.2.2; [CG: R.11].
+[11] Avoid naked new and delete operations; §4.2.2; [CG: R.11].
 [12] Use resource handles and RAII to manage resources; §4.2.2; [CG: R.1].
 [13] If a class is a container, give it an initializer-list constructor; §4.2.3; [CG: C.103].
 [14] Use abstract classes as interfaces when complete separation of interface and implementation is needed; §4.3; [CG: C.122].
@@ -184,7 +184,7 @@ B. Stroustrup: A Tour of C++ (Second Edition). July 2018. Addison-Wesley. ISBN 9
  [1] Control construction, copy, move, and destruction of objects; §5.1.1; [CG: R.1].
  [2] Design constructors, assignments, and the destructor as a matched set of operations; §5.1.1; [CG: C.22].
  [3] Define all essential operations or none; §5.1.1; [CG: C.21].
- [4] If a default constructor, assignment, or destructor is appropriate, let the compiler generate it (don’t rewrite it yourself); §5.1.1; [CG: C.20].
+ [4] If a default constructor, assignment, or destructor is appropriate, let the compiler generate it (don't rewrite it yourself); §5.1.1; [CG: C.20].
  [5] If a class has a pointer member, consider if it needs a user-defined or deleted destructor, copy and move; §5.1.1; [CG: C.32] [CG: C.33].
  [6] If a class has a user-defined destructor, it probably needs user-defined or deleted copy and move; §5.2.1.
  [7] By default, declare single-argument constructors explicit; §5.1.1; [CG: C.46].
@@ -195,6 +195,30 @@ B. Stroustrup: A Tour of C++ (Second Edition). July 2018. Addison-Wesley. ISBN 9
 [12] Provide strong resource safety; that is, never leak anything that you think of as a resource; §5.3; [CG: R.1].
 [13] If a class is a resource handle, it needs a user-defined constructor, a destructor, and non-default copy operations; §5.3; [CG: R.1].
 [14] Overload operations to mimic conventional usage; §5.4; [CG: C.160].
-[15] Follow the standard-library container design; §5.4.2; [CG: C.100].
+[15] Follow the standard-library container design; §5.4.2;[CG: C.100].
+```
+
+## 06-templates
+
+### Code
+
+* [accumulate.cc](06-templates/accumulate.cc)
+* [count_if.cc](06-templates/count_if.cc)
+* [for_each.cc](06-templates/for_each.cc)
+
+### Advice
+```
+ [1] Use templates to express algorithms that apply to many argument types; §6.1; [CG: T.2].
+ [2] Use templates to express containers; §6.2; [CG: T.3].
+ [3] Use templates to raise the level of abstraction of code; §6.2;[CG: T.1].
+ [4] Templates are type safe, but checking happens too late; §6.2.
+ [5] Let constructors or function templates deduce class template argument types; §6.2.3
+ [6] Use function objects as arguments to algorithms; §6.3.2; [CG: T.40].
+ [7] Use a lambda if you need a simple function object in one place only; §6.3.2.
+ [8] A virtual function member cannot be a template member function; §6.3.1.
+ [9] Use template aliases to simplify notation and hide implementation details; §6.4.2.
+[10] To use a template, make sure its definition (not just its declaration) is in scope; §7.5.
+[11] Templates offer compile-time duck typing; §7.5.
+[12] There is no separate compilation of templates: #include template definitions in every translation unit that uses them.
 ```
 

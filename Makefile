@@ -9,7 +9,8 @@ DIRS := \
     02-user-defined-types \
     03-modularity \
     04-classes \
-    05-essential-operations
+    05-essential-operations \
+	06-templates
 
 .PHONY: $(DIRS)
 
