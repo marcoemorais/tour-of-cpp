@@ -222,3 +222,28 @@ B. Stroustrup: A Tour of C++ (Second Edition). July 2018. Addison-Wesley. ISBN 9
 [12] There is no separate compilation of templates: #include template definitions in every translation unit that uses them.
 ```
 
+## 07-concepts-and-generic-programming
+
+### Code
+
+* [printf.cc](07-concepts-and-generic-programming/printf.cc)
+
+### Advice
+```
+ [1] Templates provide a general mechanism for compile-time programming; §7.1.
+ [2] When designing a template, carefully consider the concepts (requirements) assumed for its template arguments; §7.3.2.
+ [3] When designing a template, use a concrete version for initial implementation, debugging, and measurement; §7.3.2.
+ [4] Use concepts as a design tool; §7.2.1.
+ [5] Specify concepts for all template arguments; §7.2; [CG: T.10].
+ [6] Whenever possible use standard concepts (e.g., the Ranges concepts); §7.2.4; [CG: T.11].
+ [7] Use a lambda if you need a simple function object in one place only; §6.3.2.
+ [8] There is no separate compilation of templates: #include template definitions in every translation unit that uses them.
+ [9] Use templates to express containers and ranges; §7.3.2; [CG: T.3].
+[10] Avoid “concepts” without meaningful semantics; §7.2; [CG: T.20].
+[11] Require a complete set of operations for a concept; §7.2; [CG: T.21].
+[12] Use variadic templates when you need a function that takes a variable number of arguments of a variety of types; §7.4.
+[13] Don’t use variadic templates for homogeneous argument lists (prefer initializer lists for that); §7.4.
+[14] To use a template, make sure its definition (not just its declaration) is in scope; §7.5.
+[15] Templates offer compile-time “duck typing”; §7.5.
+```
+

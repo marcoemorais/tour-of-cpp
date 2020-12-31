@@ -10,7 +10,8 @@ DIRS := \
     03-modularity \
     04-classes \
     05-essential-operations \
-	06-templates
+	06-templates \
+    07-concepts-and-generic-programming
 
 .PHONY: $(DIRS)
 
