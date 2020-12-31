@@ -247,3 +247,17 @@ B. Stroustrup: A Tour of C++ (Second Edition). July 2018. Addison-Wesley. ISBN 9
 [15] Templates offer compile-time “duck typing”; §7.5.
 ```
 
+## 08-library-overview
+
+### Code
+
+### Advice
+
+```
+ [1] Don’t reinvent the wheel; use libraries; §8.1; [CG: SL.1.]
+ [2] When you have a choice, prefer the standard library over other libraries; §8.1; [CG: SL.2].
+ [3] Do not think that the standard library is ideal for everything; §8.1.
+ [4] Remember to #include the headers for the facilities you use; §8.3.
+ [5] Remember that standard-library facilities are defined in namespace std; §8.3; [CG: SL.3].
+```
+
