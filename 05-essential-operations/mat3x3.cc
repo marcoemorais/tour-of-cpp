@@ -1,3 +1,4 @@
+// Demonstrate copy/move constructor and assignment for POD-type class.
 #include <algorithm>
 #include <cstddef>
 #include <istream>

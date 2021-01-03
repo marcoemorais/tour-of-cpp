@@ -1,3 +1,4 @@
+// Demonstrate copy/move constructor and assignment for resource handle class.
 #include <algorithm>
 #include <cstddef>
 #include <iterator>

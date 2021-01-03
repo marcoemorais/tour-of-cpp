@@ -1,3 +1,4 @@
+// Demonstrate use of std::initializer_list constructor.
 #include <algorithm>
 #include <cstddef>
 #include <initializer_list>

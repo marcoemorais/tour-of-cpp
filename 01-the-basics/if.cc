@@ -1,3 +1,4 @@
+// Go-style variable declaration as part of `if`.
 #include <iostream>
 #include <vector>
 

@@ -1,3 +1,4 @@
+// Implement function template equivalent to std::for_each with UnaryFunction.
 #include <algorithm>
 #include <cstddef>
 #include <vector>

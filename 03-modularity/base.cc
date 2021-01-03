@@ -1,3 +1,4 @@
+// Return a number as string in arbitrary base.
 #include <algorithm>
 #include <cassert>
 #include <cmath>
@@ -12,6 +13,7 @@ std::string
 base_string(int n, const int base=10)
 {
     assert(n > 0); // n is positive.
+    assert(base < 11); // base no higher than 10.
     int nbits = std::ceil(std::log(n)/std::log(base));
     std::string basenstr(nbits, '0');
     for (auto digit = 0; digit != nbits; ++digit) {
@@ -36,10 +38,10 @@ TEST_CASE("[base]")
             624, 10, "624"
         },
         {
-            624, 16, "270"
+            624, 8, "1160"
         },
         {
-            624, 8, "1160"
+            624, 4, "21300"
         },
         {
             624, 2, "1001110000"

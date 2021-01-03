@@ -1,3 +1,4 @@
+// Demonstrate different forms of for-range syntax for array/vector containers.
 #include <cstddef>
 #include <iostream>
 

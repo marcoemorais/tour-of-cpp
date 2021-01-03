@@ -1,4 +1,4 @@
-
+// Demonstrate `enum class` and use of operator overloading with enum.
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest/doctest.h"
 

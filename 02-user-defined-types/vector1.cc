@@ -1,3 +1,4 @@
+// Repeat of `read_and_sum.cc`, but using cpp constructor/destructor.
 #include <cstddef>
 #include <cmath>
 #include <sstream>

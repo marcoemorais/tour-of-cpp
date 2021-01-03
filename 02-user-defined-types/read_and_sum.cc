@@ -1,3 +1,4 @@
+// Read n integers from istream, c-style alloc/free functions.
 #include <cstddef>
 #include <sstream>
 

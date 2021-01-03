@@ -1,3 +1,4 @@
+// Demonstrate use of unpacking and for-range syntax for map containers.
 #include <iostream>
 #include <unordered_map>
 

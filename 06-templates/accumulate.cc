@@ -1,3 +1,4 @@
+// Implement function template equivalent to std::accumulate.
 #include <cstdint>
 #include <iterator>
 #include <numeric>

@@ -1,3 +1,4 @@
+// Demonstrate use of unpacking for multi-value return type.
 #include <istream>
 #include <sstream>
 

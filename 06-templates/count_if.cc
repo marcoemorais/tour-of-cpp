@@ -1,3 +1,4 @@
+// Implement function template equivalent to std::count_if with UnaryPredicate.
 #include <iterator>
 #include <vector>
 

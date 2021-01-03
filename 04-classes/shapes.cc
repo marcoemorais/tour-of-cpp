@@ -1,3 +1,4 @@
+// Polymorphic hierarchy with pure virtual base class, container of unique_ptr to base class.
 #include <cmath>
 #include <memory>
 #include <typeinfo>

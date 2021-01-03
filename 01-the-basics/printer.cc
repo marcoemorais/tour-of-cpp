@@ -1,3 +1,4 @@
+// Template for printing containers.
 #include <iostream>
 #include <iterator>
 #include <vector>

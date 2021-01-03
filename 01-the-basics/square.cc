@@ -1,3 +1,4 @@
+// Demonstrate `constexpr` for pure functions aka functions without side-effects.
 #include <vector>
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN

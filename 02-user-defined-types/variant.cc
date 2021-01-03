@@ -1,3 +1,4 @@
+// Demonstrate std::variant as an improvment of `union`.
 #include <variant>
 #include <string>
 

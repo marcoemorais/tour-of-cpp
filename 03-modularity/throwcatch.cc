@@ -1,3 +1,4 @@
+// Demonstrate cpp convention of throw-by-value and catch by (const) reference.
 #include <iostream>
 #include <stdexcept>
 

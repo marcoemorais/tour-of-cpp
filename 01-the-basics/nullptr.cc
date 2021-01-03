@@ -1,3 +1,4 @@
+// Demonstrate use of `nullptr` as replacement for `NULL` macro.
 #include <vector>
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN

@@ -1,0 +1,3 @@
+CXXSRCS =
+
+include ../Makefile.defs

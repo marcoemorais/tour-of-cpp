@@ -1,3 +1,4 @@
+// Implement typesafe version of printf using variadic templates.
 #include <cmath>
 #include <iostream>
 
