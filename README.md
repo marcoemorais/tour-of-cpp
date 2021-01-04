@@ -140,6 +140,9 @@ See also: [Advice](ADVICE.html)
 
 ### Code
 
+* [anytoany.cc](10-input-and-output/anytoany.cc)
+    * Demonstrate use of std::stringstream for any-to-any conversion.
+
 ## 11-containers
 
 ### Code
