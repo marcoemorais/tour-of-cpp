@@ -129,6 +129,13 @@ See also: [Advice](ADVICE.html)
 
 ### Code
 
+* [stringops.cc](09-strings-and-regular-expressions/stringops.cc)
+    * Demonstrate operations in std::string.
+* [catstringview.cc](09-strings-and-regular-expressions/catstringview.cc)
+    * Demonstrate operations in std::string_view.
+* [regexops.cc](09-strings-and-regular-expressions/regexops.cc)
+    * Demonstrate operations in std::regex.
+
 ## 10-input-and-output
 
 ### Code
