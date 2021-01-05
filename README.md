@@ -164,6 +164,11 @@ See also: [Advice](ADVICE.html)
 
 ### Code
 
+* [findall.cc](12-algorithms/findall.cc)
+    * Implement template function findall that demonstrates use of type alias.
+* [unique.cc](12-algorithms/unique.cc)
+    * Implement function template equivalent to std::unique for removing adjacent duplicate values.
+
 ## 13-utilities
 
 ### Code
