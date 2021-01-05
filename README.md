@@ -147,6 +147,19 @@ See also: [Advice](ADVICE.html)
 
 ### Code
 
+* [customhash.cc](11-containers/customhash.cc)
+    * Demonstrate use of custom hash functions with containers.
+* [inserter.cc](11-containers/inserter.cc)
+    * Demonstrate use of std::inserter for adding elements to container.
+* [mapinsert.cc](11-containers/mapinsert.cc)
+    * Demonstrate different ways to insert into a unordered_map.
+* [rangecheckvec.cc](11-containers/rangecheckvec.cc)
+    * Demonstrate using composition to obtain range-checked std::vector.
+* [vecemplace.cc](11-containers/vecemplace.cc)
+    * Demonstrate use of template forwarding for emplace into container.
+* [vecsizecap.cc](11-containers/vecsizecap.cc)
+    * Demonstrate size and capacity of std::vector with reserve, resize, clear, and shrink_to_fit.
+
 ## 12-algorithms
 
 ### Code
