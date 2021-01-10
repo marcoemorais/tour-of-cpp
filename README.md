@@ -166,8 +166,12 @@ See also: [Advice](ADVICE.html)
 
 * [findall.cc](12-algorithms/findall.cc)
     * Implement template function findall that demonstrates use of type alias.
+* [parallelsort.cc](12-algorithms/parallelsort.cc)
+    * Demonstrate std::execution policies for parallel and/or vectorized sorting.
 * [unique.cc](12-algorithms/unique.cc)
     * Implement function template equivalent to std::unique for removing adjacent duplicate values.
+* [wordcount.cc](12-algorithms/wordcount.cc)
+    * Emit word frequency count based on input read from stdin.
 
 ## 13-utilities
 
