@@ -177,6 +177,11 @@ See also: [Advice](ADVICE.html)
 
 ### Code
 
+* [smartptr.cc](13-utilities/smartptr.cc)
+    * Demonstrate use of std::unique_ptr and std::shared_ptr.
+* [swap.cc](13-utilities/swap.cc)
+    * Demonstrate exception safe swap implemented using std::move.
+
 ## 14-numerics
 
 ### Code
