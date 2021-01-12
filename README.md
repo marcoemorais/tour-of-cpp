@@ -179,12 +179,20 @@ See also: [Advice](ADVICE.html)
 
 * [bitsetops.cc](13-utilities/bitsetops.cc)
     * Demonstrate operations in std::bitset.
+* [iterator_traits.cc](13-utilities/iterator_traits.cc)
+    * Implement traits-based function overload with type aliases.
+* [optional.cc](13-utilities/optional.cc)
+    * Demonstrate use of std::optional.
+* [pairtuple.cc](13-utilities/pairtuple.cc)
+    * Demonstrate use of std::pair and std::tuple.
 * [smartptr.cc](13-utilities/smartptr.cc)
     * Demonstrate use of std::unique_ptr and std::shared_ptr.
 * [span.cc](13-utilities/span.cc)
     * Span is a (pointer,count) pair with support for range-based for loop.
 * [swap.cc](13-utilities/swap.cc)
     * Demonstrate exception safe swap implemented using std::move.
+* [timeit.cc](13-utilities/timeit.cc)
+    * Demonstrate use of std::chrono for microbenchmarking.
 
 ## 14-numerics
 
