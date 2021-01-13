@@ -201,4 +201,11 @@ See also: [Advice](ADVICE.html)
 ## 15-concurrency
 
 ### Code
+* [counter.cc](15-concurrency/counter.cc)
+    * Demonstrate use of mutex for sharing counter across threads.
+* [deadlock.cc](15-concurrency/deadlock.cc)
+    * Demonstrate use of scoped_lock with pairs of locks to avoid deadlock.
+* [thread.cc](15-concurrency/thread.cc)
+    * Demonstrate initializing std::thread with function and functor.
+
 
