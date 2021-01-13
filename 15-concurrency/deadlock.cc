@@ -67,7 +67,7 @@ TEST_CASE("[deadlock]")
 
         SUBCASE("order=consistent")
         {
-            // Pass messages in consistent order, m1 and m2.
+            // Pass messages in consistent order: t1=(m1,m2), t2=(m1,m2)
             std::thread t1{thread_func, num_repeat, std::cref(m1), std::cref(m2), safe};
             std::thread t2{thread_func, num_repeat, std::cref(m1), std::cref(m2), safe};
 
@@ -101,7 +101,7 @@ TEST_CASE("[deadlock]")
 
         SUBCASE("order=consistent")
         {
-            // Pass messages in consistent order, m1 and m2.
+            // Pass messages in consistent order: t1=(m1,m2), t2=(m1,m2)
             std::thread t1{thread_func, num_repeat, std::cref(m1), std::cref(m2), safe};
             std::thread t2{thread_func, num_repeat, std::cref(m1), std::cref(m2), safe};
 

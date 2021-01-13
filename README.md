@@ -205,6 +205,8 @@ See also: [Advice](ADVICE.html)
     * Demonstrate use of mutex for sharing counter across threads.
 * [deadlock.cc](15-concurrency/deadlock.cc)
     * Demonstrate use of scoped_lock with pairs of locks to avoid deadlock.
+* [starvation.cc](15-concurrency/starvation.cc)
+    * Demonstrate thread starvation between greedy and polite worker threads.
 * [thread.cc](15-concurrency/thread.cc)
     * Demonstrate initializing std::thread with function and functor.
 
