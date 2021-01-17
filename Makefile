@@ -31,10 +31,10 @@ $(DIRS):
 .PHONY: readme advice cp-vimrc
 
 readme:
-	docker run --name $(NAME) --rm -it -v $(PWD):/src $(IMAGE):$(TAG) pandoc --to html --metadata pagetitle=README --standalone README.md --output README.html
+	pandoc --to html --metadata pagetitle=README --standalone README.md --output README.html
 
 advice:
-	docker run --name $(NAME) --rm -it -v $(PWD):/src $(IMAGE):$(TAG) pandoc --to html --metadata pagetitle=ADVICE --standalone ADVICE.md --output ADVICE.html
+	pandoc --to html --metadata pagetitle=ADVICE --standalone ADVICE.md --output ADVICE.html
 
 cp-vimrc:
 	docker cp vimrc $(NAME):/root/.vimrc
