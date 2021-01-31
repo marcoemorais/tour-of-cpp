@@ -28,15 +28,12 @@ all:: $(DIRS)
 $(DIRS):
 	$(MAKE) -C $@ $(ACTION)
 
-.PHONY: readme advice cp-vimrc
+.PHONY: readme advice
 
 readme:
 	pandoc --to html --metadata pagetitle=README --standalone README.md --output README.html
 
 advice:
 	pandoc --to html --metadata pagetitle=ADVICE --standalone ADVICE.md --output ADVICE.html
-
-cp-vimrc:
-	docker cp vimrc $(NAME):/root/.vimrc
 
 include Makefile.defs
