@@ -1,16 +1,8 @@
 # tour-of-cpp
 
-Exercises based on or inspired from reading:
-```
-@book{stroustrup2018toc,
-    author = {B. Stroustrup},
-    title = {A Tour of C++},
-    year = {2018},
-    isbn = {978-0-13-499783-4},
-    publisher = {Addison-Wesley},
-    edition = {2st}
-}
-```
+Exercises based on or inspired from reading _A Tour of C++_ by Bjarne Stroustrup.
+
+> Stroustrup, B. 2018. A Tour of C++. 2nd edition. Addison-Wesley.
 
 See also: [Advice](ADVICE.html)
 
