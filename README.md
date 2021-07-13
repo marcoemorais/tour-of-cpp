@@ -198,6 +198,9 @@ See also: [Advice](ADVICE.html)
 
 ### Code
 
+* [random.cc](14-numerics/random.cc)
+    * Demonstrate use of pseudorandom number generators in std::random.
+
 ## 15-concurrency
 
 ### Code
