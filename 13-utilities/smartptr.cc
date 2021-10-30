@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <memory>
 
+#include <string.h>
+
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest/doctest.h"
 
@@ -27,6 +29,28 @@ TEST_CASE("[std::unique_ptr]")
         REQUIRE(bool(pi1) == true);
         REQUIRE(*pi1 == 42);
         REQUIRE(bool(pi2) == false);
+    }
+
+    SUBCASE("array")
+    {
+        constexpr std::size_t nelem{10};
+        const char nums[] = "123456789";
+        auto cstr = std::make_unique<char[]>(nelem);
+        strcat(cstr.get(), nums);
+        REQUIRE(strcmp(cstr.get(), nums) == 0);
+    }
+
+    SUBCASE("array-of-pointers")
+    {
+        constexpr std::size_t nelem{10};
+        const char nums[] = "123456789";
+        auto pcstr = std::make_unique<const char*[]>(nelem);
+        for (std::size_t i = 0; i < nelem; ++i) {
+            pcstr.get()[i] = nums; // Pointer, not a copy.
+        }
+        for (std::size_t i = 0; i < nelem; ++i) {
+            REQUIRE(strcmp(pcstr.get()[i], nums) == 0);
+        }
     }
 
     SUBCASE("custom deleter")
