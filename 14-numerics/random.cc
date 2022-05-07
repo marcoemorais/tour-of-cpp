@@ -10,7 +10,7 @@
 
 double chisq_vec(const std::vector<int>& hist, int nsamples, int nbins)
 {
-    // For uniform distribution, epxected is same for all bins.
+    // For uniform distribution, expected is same for all bins.
     double expected = nsamples/nbins;
     double sum = 0;
     for (int i = 0; i < nbins; ++i) {
@@ -28,15 +28,15 @@ TEST_CASE("[uniform_int_distribution]")
     std::uniform_int_distribution<int> dis(minv, maxv); // Closed interval: [minv,maxv]
 
     int nbins = maxv-minv+1;
-    std::vector<int> hist(nbins, 0);
+    std::vector<int> hist(minv + nbins, 0);
     int nsamples = 12'000;
     for (int ntrial = 0; ntrial < nsamples; ++ntrial) {
-        auto binv = dis(gen) - minv;  // minv starts from bin 0.
+        auto binv = dis(gen) - minv; // binv starts from bin 0.
         ++hist[binv];
     }
 
     for (int i = minv; i <= maxv; ++i) {
-        std::cout << "[" << i << "]=" << hist[i] << "\n";
+        std::cout << "[" << i << "]=" << hist[i-minv] << "\n";
     }
 
     // https://www.itl.nist.gov/div898/handbook/eda/section3/eda3674.htm
@@ -50,7 +50,7 @@ TEST_CASE("[uniform_int_distribution]")
 
 double chisq_map(const std::map<double, int>& hist, int nsamples, int nbins)
 {
-    // For uniform distribution, epxected is same for all bins.
+    // For uniform distribution, expected is same for all bins.
     double expected = nsamples/nbins;
     double sum = 0;
     for (const auto& bin : hist) {
