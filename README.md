@@ -185,6 +185,8 @@ See also: [Advice](ADVICE.html)
     * Demonstrate exception safe swap implemented using std::move.
 * [timeit.cc](13-utilities/timeit.cc)
     * Demonstrate use of std::chrono for microbenchmarking.
+* [rng_iterator.cc](13-utilities/rng_iterator.cc)
+    * An iterator that returns an infinite sequence of random integers.
 
 ## 14-numerics
 
