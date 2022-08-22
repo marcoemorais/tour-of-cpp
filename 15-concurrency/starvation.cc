@@ -17,8 +17,8 @@ TEST_CASE("[starvation]")
 
     // worker_thread repeatedly locks a mutex while performing some work.
     auto worker_thread = [&runtime, &m] (std::chrono::nanoseconds wait, int num_wait, int& work_count) {
-        auto begin = std::chrono::high_resolution_clock::now();
-        while ((std::chrono::high_resolution_clock::now() - begin) < runtime) {
+        auto begin = std::chrono::steady_clock::now();
+        while ((std::chrono::steady_clock::now() - begin) < runtime) {
             for (int i = 0; i != num_wait; ++i) {
                 // Acquire and hold lock for wait interval.
                 std::scoped_lock<std::mutex> guard{m};

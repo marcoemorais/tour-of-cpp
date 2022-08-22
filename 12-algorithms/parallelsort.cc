@@ -30,9 +30,9 @@ double timeit_sort(ExecutionPolicy&& policy)
         // Shuffle the input vector.
         std::shuffle(std::begin(nums), std::end(nums), gen);
 
-        auto t1 = std::chrono::high_resolution_clock::now();
+        auto t1 = std::chrono::steady_clock::now();
         std::sort(policy, std::begin(nums), std::end(nums));
-        auto t2 = std::chrono::high_resolution_clock::now();
+        auto t2 = std::chrono::steady_clock::now();
         duration.push_back(std::chrono::duration<double, std::milli>(t2-t1).count());
 
         --nrepeat;
