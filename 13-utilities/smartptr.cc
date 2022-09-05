@@ -110,7 +110,7 @@ TEST_CASE("[std::shared_ptr]")
         // Common for factory functions to return std::unique_ptr.
         // Return value can be assigned to std::unique_ptr or std::shared_ptr.
         auto factory_func = []() -> std::unique_ptr<T> {
-            return std::make_unique<T>(T());
+            return std::make_unique<T>(); // Use default constructor.
         };
         std::shared_ptr<T> sp1 = factory_func(); // Assignment from unique_ptr to shared_ptr.
         REQUIRE(bool(sp1) == true);
