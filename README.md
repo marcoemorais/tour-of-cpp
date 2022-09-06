@@ -166,6 +166,8 @@ See also: [Advice](ADVICE.html)
     * Demonstrate std::execution policies for parallel and/or vectorized sorting.
 * [partial_sum.cc](12-algorithms/partial_sum.cc)
     * partial_sum implements cumsum and factorial.
+* [set_ops.cc](12-algorithms/set_ops.cc)
+    * set_ops demonstrates union, intersection, and (symmetric)difference.
 * [unique.cc](12-algorithms/unique.cc)
     * Implement function template equivalent to std::unique for removing adjacent duplicate values.
 * [wordcount.cc](12-algorithms/wordcount.cc)
