@@ -156,6 +156,8 @@ See also: [Advice](ADVICE.html)
 
 ### Code
 
+* [all_any_none_of.cc](12-algorithms/all_any_none_of.cc)
+    * all_any_none_of demonstrates logical algorithms using bind.
 * [findall.cc](12-algorithms/findall.cc)
     * Implement template function findall that demonstrates use of type alias.
 * [first_less_than.cc](12-algorithms/first_less_than.cc)
