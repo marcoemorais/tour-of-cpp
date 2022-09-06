@@ -1,3 +1,3 @@
-CXXSRCS = findall.cc parallelsort.cc unique.cc wordcount.cc
+CXXSRCS = findall.cc first_less_than.cc parallelsort.cc unique.cc wordcount.cc
 
 include ../Makefile.defs

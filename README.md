@@ -158,6 +158,8 @@ See also: [Advice](ADVICE.html)
 
 * [findall.cc](12-algorithms/findall.cc)
     * Implement template function findall that demonstrates use of type alias.
+* [first_less_than.cc](12-algorithms/first_less_than.cc)
+    * first_less_than complements lower_bound and upper_bound.
 * [parallelsort.cc](12-algorithms/parallelsort.cc)
     * Demonstrate std::execution policies for parallel and/or vectorized sorting.
 * [unique.cc](12-algorithms/unique.cc)
