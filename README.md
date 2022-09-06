@@ -127,6 +127,8 @@ See also: [Advice](ADVICE.html)
     * Demonstrate operations in std::string_view.
 * [regexops.cc](09-strings-and-regular-expressions/regexops.cc)
     * Demonstrate operations in std::regex.
+* [csvparsers.cc](09-strings-and-regular-expressions/csvparsers.cc)
+    * All the different ways to parse a csv.
 
 ## 10-input-and-output
 
