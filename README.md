@@ -164,6 +164,8 @@ See also: [Advice](ADVICE.html)
     * first_less_than complements lower_bound and upper_bound.
 * [parallelsort.cc](12-algorithms/parallelsort.cc)
     * Demonstrate std::execution policies for parallel and/or vectorized sorting.
+* [partial_sum.cc](12-algorithms/partial_sum.cc)
+    * partial_sum implements cumsum and factorial.
 * [unique.cc](12-algorithms/unique.cc)
     * Implement function template equivalent to std::unique for removing adjacent duplicate values.
 * [wordcount.cc](12-algorithms/wordcount.cc)
