@@ -7,8 +7,8 @@
 #include "doctest/doctest.h"
 
 // first_less_than returns iterator to first in [first, last) < v.
-template <typename FwdIter, typename Value>
-FwdIter first_less_than(FwdIter first, FwdIter last, const Value& v)
+template <typename BidIter, typename Value>
+BidIter first_less_than(BidIter first, BidIter last, const Value& v)
 {
     auto it = std::lower_bound(first, last, v);
     return it == first ? last : --it;
