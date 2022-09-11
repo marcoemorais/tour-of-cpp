@@ -1,10 +1,19 @@
 # tour-of-cpp
 
-Exercises based on or inspired from reading _A Tour of C++_ by Bjarne Stroustrup.
+This repo is inspired by many of the concise examples of idiomatic modern C++ that appear in the book _A Tour of C++_ by Bjarne Stroustrup. I initially started the repo to expand and experiement with the specific examples from the book, but I have since added a lot of new examples of modern C++ features that are not from the book.
 
-> Stroustrup, B. 2018. A Tour of C++. 2nd edition. Addison-Wesley.
+```
+@book{stroustrup2018tour,
+  title={A Tour of C++},
+  author={Stroustrup, Bjarne},
+  year={2018},
+  publisher={Addison-Wesley Professional}
+}
+```
 
-See also: [Advice](ADVICE.html)
+Find more information about the book at the link below:
+
+https://www.stroustrup.com/Tour.html
 
 ## Table of Contents
 
