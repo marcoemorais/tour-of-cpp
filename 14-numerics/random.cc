@@ -28,7 +28,7 @@ TEST_CASE("[uniform_int_distribution]")
     std::uniform_int_distribution<int> dis(minv, maxv); // Closed interval: [minv,maxv]
 
     int nbins = maxv-minv+1;
-    std::vector<int> hist(minv + nbins, 0);
+    std::vector<int> hist(nbins, 0);
     int nsamples = 12'000;
     for (int ntrial = 0; ntrial < nsamples; ++ntrial) {
         auto binv = dis(gen) - minv; // binv starts from bin 0.
@@ -69,7 +69,7 @@ TEST_CASE("[uniform_real_distribution]")
 
     int nbins = 10;
     std::map<double, int> hist; // Left edges.
-    int nsamples = 10'000;
+    int nsamples = 12'000;
     for (int ntrial = 0; ntrial < nsamples; ++ntrial) {
         auto binv = int(dis(gen)*nbins)/double(nbins); // f.p. to bin
         ++hist[binv];
