@@ -1,3 +1,3 @@
-CXXSRCS = anytoany.cc
+CXXSRCS = anytoany.cc readfile.cc
 
 include ../Makefile.defs

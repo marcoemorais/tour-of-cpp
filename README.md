@@ -136,6 +136,8 @@ See also: [Advice](ADVICE.html)
 
 * [anytoany.cc](10-input-and-output/anytoany.cc)
     * Demonstrate use of std::stringstream for any-to-any conversion.
+* [readfile.cc](10-input-and-output/readfile.cc)
+    * Read a file line-by-line raising std::runtime_error if error.
 
 ## 11-containers
 
