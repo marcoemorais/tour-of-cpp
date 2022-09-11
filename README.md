@@ -1,6 +1,6 @@
 # tour-of-cpp
 
-This repo is inspired by many of the concise examples of idiomatic modern C++ that appear in the book _A Tour of C++_ by Bjarne Stroustrup. I initially started the repo to expand and experiement with the specific examples from the book, but I have since added a lot of new examples of modern C++ features that are not from the book.
+This repo is inspired by many of the concise examples of idiomatic modern C++ that appear in the book _A Tour of C++_ by Bjarne Stroustrup. I initially started the repo to expand and experiment with the specific examples from the book, but I have since added a lot of new examples of modern C++ features that are not from the book.
 
 ```
 @book{stroustrup2018tour,
