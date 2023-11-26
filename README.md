@@ -154,6 +154,8 @@ https://www.stroustrup.com/Tour.html
 
 * [customhash.cc](11-containers/customhash.cc)
     * Demonstrate use of custom hash functions with containers.
+* [erase_remove.cc](11-containers/erase_remove.cc)
+    * Demonstrate the erase-remove idiom to remove elements from containers.
 * [hash_combine.cc](11-containers/hash_combine.cc)
     * Demonstrate combining hash functions.
 * [inserter.cc](11-containers/inserter.cc)
