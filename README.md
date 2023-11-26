@@ -164,6 +164,8 @@ https://www.stroustrup.com/Tour.html
     * Demonstrate use of std::inserter for adding elements to container.
 * [mapinsert.cc](11-containers/mapinsert.cc)
     * Demonstrate different ways to insert into a unordered_map.
+* [priority_queue.cc](11-containers/priority_queue.cc)
+    * Demonstrate std::priority_queue using lambda functions for ordering.
 * [rangecheckvec.cc](11-containers/rangecheckvec.cc)
     * Demonstrate using composition to obtain range-checked std::vector.
 * [vecemplace.cc](11-containers/vecemplace.cc)
