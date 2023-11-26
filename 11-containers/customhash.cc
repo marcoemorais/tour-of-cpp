@@ -1,11 +1,13 @@
 // Demonstrate use of custom hash functions with containers.
 #include <cstddef>
+#include <cstdlib>
 #include <functional>
 #include <string>
 #include <tuple>
 #include <type_traits>
 #include <utility>
 #include <unordered_map>
+#include <unordered_set>
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest/doctest.h"
@@ -78,5 +80,41 @@ TEST_CASE("[customhash]")
         // Expected to not find.
         auto f2 = m1.find({2.,4.,6.});
         REQUIRE(f2 == std::end(m1));
+    }
+
+    SUBCASE("std::unordered_set:lambda")
+    {
+        // Use lambda functions for Hash and KeyEqual.
+
+        // DivHash hashes quotient and remainder in a naive way.
+        auto DivHash = [](const std::div_t& dv) -> std::size_t {
+            return hash_value(dv.quot) ^ hash_value(dv.rem) << 1;
+        };
+        auto DivEquals = [](const std::div_t& d1, const std::div_t& d2) {
+            return d1.quot == d2.quot && d1.rem == d2.rem;
+        };
+
+        std::unordered_set<std::div_t,
+                           decltype(DivHash),
+                           decltype(DivEquals)> s1(
+            // First argument is std::initializer_list.
+            {
+                std::div(1, 3), // 0 1
+                std::div(2, 3), // 0 2
+                std::div(3, 3), // 1 0
+                std::div(4, 3), // 1 1
+                std::div(5, 3), // 1 2
+                std::div(6, 3), // 2 0
+            },
+            10, // Bucket count.
+            DivHash,
+            DivEquals
+        );
+
+        // Expected to find.
+        REQUIRE(s1.count({0, 1}) == 1);
+
+        // Expected to not find.
+        REQUIRE(s1.count({3, 0}) == 0);
     }
 }
