@@ -114,6 +114,8 @@ https://www.stroustrup.com/Tour.html
     * Implement function template equivalent to std::count_if with UnaryPredicate.
 * [for_each.cc](06-templates/for_each.cc)
     * Implement function template equivalent to std::for_each with UnaryFunction.
+* [recursive_lambdas.cc](06-templates/recursive_lambdas.cc)
+    * Demonstrate methods for creating recursive lambda functions.
 
 ## 07-concepts-and-generic-programming
 
