@@ -177,6 +177,8 @@ https://www.stroustrup.com/Tour.html
     * Implement template function findall that demonstrates use of type alias.
 * [first_less_than.cc](12-algorithms/first_less_than.cc)
     * first_less_than complements lower_bound and upper_bound.
+* [heap_ops.cc](12-algorithms/heap_ops.cc)
+    * Demonstrate heap functions in std::algorithms.
 * [parallelsort.cc](12-algorithms/parallelsort.cc)
     * Demonstrate std::execution policies for parallel and/or vectorized sorting.
 * [partial_sum.cc](12-algorithms/partial_sum.cc)
