@@ -101,3 +101,58 @@ TEST_CASE("[std::regex_iterator]")
     REQUIRE(rcv == expected);
 }
 
+TEST_CASE("[std::regex_replace]")
+{
+    // Pattern to match leading or trailing space.
+    std::regex leading_or_trailing_space{R"(^\s+|\s+$)"};
+
+    struct test_case
+    {
+        std::string input;
+        std::string expected;
+    };
+
+    std::vector<test_case> test_cases{
+        // No leading or trailing space.
+        {
+            "hello",
+            "hello",
+        },
+        // Only leading space.
+        {
+            " hello",
+            "hello",
+        },
+        {
+            "   hello",
+            "hello",
+        },
+        // Only trailing space.
+        {
+            "hello ",
+            "hello",
+        },
+        {
+            "hello   ",
+            "hello",
+        },
+        // Leading and trailing space.
+        {
+            " hello ",
+            "hello",
+        },
+        {
+            "   hello   ",
+            "hello",
+        },
+    };
+
+    for (const auto& c : test_cases) {
+        std::ostringstream oss;
+        // Trim leading or trailing space.
+        std::regex_replace(std::ostream_iterator<char>(oss),
+                           c.input.begin(), c.input.end(),
+                           leading_or_trailing_space, "");
+        REQUIRE(oss.str() == c.expected);
+    }
+}
