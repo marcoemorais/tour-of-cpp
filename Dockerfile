@@ -1,5 +1,5 @@
 # Official gcc container provides build toolchain.
-FROM gcc:10.4
+FROM gcc:12.3
 
 LABEL maintainer="Marco Morais <marcoemorais@yahoo.com>"
 
