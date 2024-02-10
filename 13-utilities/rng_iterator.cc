@@ -11,14 +11,17 @@
 class rng_iterator
 {
   public:
-    class iterator : public std::iterator<
-        std::input_iterator_tag, // iterator_category
-        int,                     // value_type
-        int,                     // difference_type
-        int*,                    // pointer
-        int>                     // reference
+    class iterator
     {
       public:
+        // Inheriting from std::iterator deprecated in C++17.
+        // Instead explicitly add the iterator trait typedefs.
+        using iterator_category = std::input_iterator_tag;
+        using value_type = int;
+        using difference_type = std::ptrdiff_t;
+        using pointer = int*;
+        using reference = int;
+
         iterator(rng_iterator& rng) : rng(rng) { }
 
         // operator++ generates the next pseudorandom value in the sequence.

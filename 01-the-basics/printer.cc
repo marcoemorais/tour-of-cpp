@@ -6,6 +6,15 @@
 #include <string>
 #include <utility>
 
+// operator<< for std::pair.
+template <typename T1, typename T2>
+std::ostream&
+operator<<(std::ostream& os, const std::pair<T1, T2>& entry)
+{
+    os << "(" << entry.first << "," << entry.second << ")";
+    return os;
+}
+
 // printer prints elements from [first, last).
 template <typename FwdIter>
 std::ostream&
@@ -22,15 +31,6 @@ printer(std::ostream& os, FwdIter first, FwdIter last, const std::string& name="
     return os;
 }
 
-// operator<< for std::pair.
-template <typename T1, typename T2>
-std::ostream&
-operator<<(std::ostream& os, const std::pair<T1, T2>& entry)
-{
-    os << "(" << entry.first << "," << entry.second << ")";
-    return os;
-}
-
 int main()
 {
     std::vector<int> v1{1,2,3,4,5};
@@ -40,11 +40,11 @@ int main()
     printer(std::cout, std::begin(v2), std::end(v2), "v2");
 
     std::unordered_map<std::string, int> m1{
-        {"one", 1},
-        {"two", 2},
+        {"one",   1},
+        {"two",   2},
         {"three", 3},
-        {"four", 4},
-        {"five", 5},
+        {"four",  4},
+        {"five",  5},
     };
     printer(std::cout, std::begin(m1), std::end(m1), "m1");
 

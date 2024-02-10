@@ -1,8 +1,8 @@
 // Demonstrate use of std::unique_ptr and std::shared_ptr.
 #include <cstdlib>
 #include <memory>
-
-#include <string.h>
+#include <functional>
+#include <cstring>
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest/doctest.h"
