@@ -116,6 +116,8 @@ https://www.stroustrup.com/Tour.html
     * Implement function template equivalent to std::for_each with UnaryFunction.
 * [recursive_lambdas.cc](06-templates/recursive_lambdas.cc)
     * Demonstrate methods for creating recursive lambda functions.
+* [tuple_apply.cc](06-templates/tuple_apply.cc)
+    * Apply a function to every member of tuple using fold expression.
 
 ## 07-concepts-and-generic-programming
 

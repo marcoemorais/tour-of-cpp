@@ -31,9 +31,9 @@ $(DIRS):
 .PHONY: readme advice
 
 readme:
-	pandoc --to html --metadata pagetitle=README --standalone README.md --output README.html
+	pandoc --to html --metadata pagetitle=README README.md --output README.html
 
 advice:
-	pandoc --to html --metadata pagetitle=ADVICE --standalone ADVICE.md --output ADVICE.html
+	pandoc --to html --metadata pagetitle=ADVICE ADVICE.md --output ADVICE.html
 
 include Makefile.defs
